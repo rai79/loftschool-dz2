@@ -1,0 +1,48 @@
+mixin socials(socialItems)
+	.socials
+		ul.socials__list
+			each item in socialItems
+				li.social__item
+					a.socials__link(href="#" class="socials__link_#{item}")= item
+
+mixin breadcrumbs(items)
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				each item, idx in items
+					li.breadcrumbs__item(class="#{idx == items.length-1 ? 'breadcrumbs__item_active' : ''}")
+						a(href="#").breadcrumbs__link= item
+
+mixin menu(menuItems, indexActive)
+	nav.nav
+		.container
+			ul.nav__list
+				each item, idx in menuItems
+					li.nav__item(class="#{idx == indexActive-1 ? 'nav__item_active' : ''}")
+						a(href="#").nav__link= item
+
+mixin goods-brands(brandsItems)
+	fieldset.goods-brands
+		each item in brandsItems
+			input(name="goods-brands" type="checkbox" value=item).goods-brands__input
+		a(href="#").goods-brands__reset
+
+mixin goods-colors(colorsItems)
+	fieldset.goods-colors
+		ul.goods-colors__list
+			each item in colorsItems
+				li.goods-colors__item
+				a(href="#").goods-colors__link= item
+
+mixin goods-op-sys(osItems)
+	fieldset.goods-op-sys
+		each item in osItems
+			input(name="goods-op-sys" type="checkbox" value=item).goods-op-sys__input
+		a(href="#").goods-op-sys__reset
+
+mixin footer-menu(menuItems)
+	.footer-menu
+		ul.footer-menu__list
+			each item in menuItems
+				li.footer-menu__item
+					a(href="#").footer-menu__link= item

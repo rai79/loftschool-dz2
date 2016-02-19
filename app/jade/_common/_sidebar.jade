@@ -1,0 +1,30 @@
+aside.filter
+	.type-goods
+		ul.type-goods__list
+			- var goodsItems = ['Флагманы','Бюджетная линейка'];
+			each item in goodsItems
+				li.type-goods__item
+					a(href="#" class="").filter__type-goods__link= item
+	.goods
+		form.goods-filter
+			ul.goods__list
+				li.goods__item
+					a(href="#").goods__trigger Наличие в магазинах
+						fieldset.goods-availability
+							input(name="availability" type="radio" value="Во всех магазинах" checked).goods-availability__input
+							input(name="availability" type="radio" value="В ближайшем ко мне магазине").goods-availability__input
+				li.goods__item
+					a(href="#").goods__trigger Бренды
+						+goods-brands(['Apple','Asus','Lenovo','Motorola','Samsung'])
+				li.goods__item
+					a(href="#").goods__trigger Цена
+						fieldset.goods-prices
+							input(name="goods-prices__min" type="text").goods-prices__input
+							input(name="goods-prices__max" type="text").goods-prices__input
+							.goods-prices__slider-range
+				li.goods__item
+					a(href="#").goods__trigger Цвет
+						+goods-colors(['Белый','Серый','Черный','Темно-синий','Красный','Желтый','Оранжевый','Зеленый','Голубой','Фиолетовый','Розовый','Коричневый'])
+				li.goods__item
+					a(href="#").goods__trigger Операционные системы
+						+goods-op-sys(['Android','iOS','Windows Mobile','Symbian','Custom'])

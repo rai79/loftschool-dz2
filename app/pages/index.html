@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=1230, initial-scale=1"/>
+	<meta name="description" content="Домашнее задание интернет магазин"/>
+	<meta name="keywords" content="COOLTECH"/>
+	<meta name="author" content="Рудель Алексей"/>
+	<link rel="stylesheet" href="../css/main.css"/>
+	<title>Каталог</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="maincontent">
+			<header class="header-first">
+				<div class="container">
+					<div class="socials">
+						<ul class="socials__list">
+							<li class="social__item"><a href="#" class="socials__link socials__link_fb">fb</a></li>
+							<li class="social__item"><a href="#" class="socials__link socials__link_vk">vk</a></li>
+							<li class="social__item"><a href="#" class="socials__link socials__link_tw">tw</a></li>
+						</ul>
+					</div>
+					<div class="contacts">
+						<ul class="contacts__list">
+							<li class="contacts__item"><i class="contacts__icon contact__icon_address"></i><span class="contacts__info">ул.Маяковская 6, офис 17</span></li>
+							<li class="contacts__item"><i class="contacts__icon contact__icon_phone"></i><span class="contacts__info">+7 (921) 123-12-13</span></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<header class="header-second">
+				<div class="container"><a href="/" class="logo"></a>
+					<form class="search">
+						<input name="search__input" type="text" placeholder="Что будем искать" class="search__input"/>
+						<input name="search__submit" type="submit" value="Найти" class="search__submit"/>
+					</form>
+					<div class="site-section">
+						<ul class="site-section__list">
+							<li class="site-section-item"><a href="#" class="site-section__link">Карта проезда</a></li>
+							<li class="site-section-item"><a href="#" class="site-section__link">История заказов</a></li>
+							<li class="site-section-item"><a href="#" class="site-section__link">Корзина</a></li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<nav class="nav">
+				<div class="container">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="#" class="nav__link">Планшеты</a></li>
+						<li class="nav__item nav__item_active"><a href="#" class="nav__link">Мобильные телефоны</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Mp3 плееры</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Персональные компьютеры</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Ноутбуки</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Аксессуары</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Бытовая техника</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="breadcrumbs">
+				<div class="container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item breadcrumbs__item_active"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+					</ul>
+				</div>
+			</div>
+			<article class="article">
+				<div class="container">
+					<div class="goods-type">Мобильные телефоны</div>
+					<aside class="filter">
+						<div class="type-goods">
+							<ul class="type-goods__list">
+								<li class="type-goods__item"><a href="#" class="filter__type-goods__link">Флагманы</a></li>
+								<li class="type-goods__item"><a href="#" class="filter__type-goods__link">Бюджетная линейка</a></li>
+							</ul>
+						</div>
+						<div class="goods">
+							<ul class="goods__list">
+								<li class="goods__item"><a href="#" class="goods__trigger">Наличие в магазинах
+										<form class="goods-availability">
+											<input name="availability" type="radio" value="Во всех магазинах" checked="checked" class="goods-availability__input"/>
+											<input name="availability" type="radio" value="В ближайшем ко мне магазине" class="goods-availability__input"/>
+										</form></a></li>
+								<li class="goods__item"><a href="#" class="goods__trigger">Бренды
+										<form class="goods-brands">
+											<input name="goods-brands" type="checkbox" value="Apple" class="goods-brands__input"/>
+											<input name="goods-brands" type="checkbox" value="Asus" class="goods-brands__input"/>
+											<input name="goods-brands" type="checkbox" value="Lenovo" class="goods-brands__input"/>
+											<input name="goods-brands" type="checkbox" value="Motorola" class="goods-brands__input"/>
+											<input name="goods-brands" type="checkbox" value="Samsung" class="goods-brands__input"/><a href="#" class="goods-brands__reset"></a>
+										</form></a></li>
+								<li class="goods__item"><a href="#" class="goods__trigger">Цена
+										<form class="goods-prices">
+											<input name="goods-prices__min" type="text" class="goods-prices__input"/>
+											<input name="goods-prices__max" type="text" class="goods-prices__input"/>
+											<div class="goods-prices__slider-range"></div>
+										</form></a></li>
+								<li class="goods__item"><a href="#" class="goods__trigger">Цвет
+										<div class="goods-colors">
+											<ul class="goods-colors__list">
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Белый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Серый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Черный</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Темно-синий</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Красный</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Желтый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Оранжевый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Зеленый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Голубой</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Фиолетовый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Розовый</a>
+												<li class="goods-colors__item"></li><a href="#" class="goods-colors__link">Коричневый</a>
+											</ul>
+										</div></a></li>
+								<li class="goods__item"><a href="#" class="goods__trigger">Операционные системы
+										<form class="goods-op-sys">
+											<input name="goods-op-sys" type="checkbox" value="Android" class="goods-op-sys__input"/>
+											<input name="goods-op-sys" type="checkbox" value="iOS" class="goods-op-sys__input"/>
+											<input name="goods-op-sys" type="checkbox" value="Windows Mobile" class="goods-op-sys__input"/>
+											<input name="goods-op-sys" type="checkbox" value="Symbian" class="goods-op-sys__input"/>
+											<input name="goods-op-sys" type="checkbox" value="Custom" class="goods-op-sys__input"/><a href="#" class="goods-op-sys__reset"></a>
+										</form></a></li>
+							</ul>
+						</div>
+					</aside>
+					<section class="content">
+						<div class="catalog">Тут каталог</div>
+					</section>
+				</div>
+			</article>
+			<article class="article">
+				<div class="container">
+					<div class="important-information">
+						<div class="important-information__columnize">Важная информация
+							<p class="important-information__paragraf">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+							<p class="important-information__paragraf">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+							<p class="important-information__paragraf">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+							<p class="important-information__paragraf">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+							<p class="important-information__paragraf">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+							<p class="important-information__paragraf">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-right"><a href="/" class="logo"></a></div>
+		<div class="footer-left">
+			<div class="socials">
+				<ul class="socials__list">
+					<li class="social__item"><a href="#" class="socials__link socials__link_fb">fb</a></li>
+					<li class="social__item"><a href="#" class="socials__link socials__link_vk">vk</a></li>
+					<li class="social__item"><a href="#" class="socials__link socials__link_tw">tw</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu">
+				<ul class="footer-menu__list">
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Планшеты</a></li>
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Мобильные телефоны</a></li>
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Mp3 плееры</a></li>
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Персональные компьютеры</a></li>
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Ноутбуки</a></li>
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Аксессуары</a></li>
+					<li class="footer-menu__item"><a href="#" class="footer-menu__link">Бытовая техника</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-copyrights">All rights reserved. 2015. no copy alowed</div>
+	</footer>
+</body>
