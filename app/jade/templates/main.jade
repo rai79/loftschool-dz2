@@ -1,0 +1,38 @@
+include ../_common/_mixins
+
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+	meta(name="viewport" content="width=1120, initial-scale=1")
+	meta(name="description" content="Домашнее задание интернет магазин")
+	meta(name="keywords" content="COOLTECH")
+	meta(name="author" content="Рудель Алексей")
+	link(rel="stylesheet", href="../css/main.css")
+	link(rel="stylesheet", href="../css/fonts.css")
+	link(rel="stylesheet", href="../bower/normalize-css/normalize.css")
+	title
+		block pageTitle
+body
+	.wrapper
+		include ../_common/_header
+		nav.nav
+			.container
+				+menu(['Планшеты','Мобильные телефоны','Mp3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'],2)
+		.breadcrumbs
+			.container
+				//- var breadcrumbs={'Главная':'#','Каталог':'#'};
+				+breadcrumbs(['Главная','Каталог'])
+		section.content
+			.container
+				block catalogTitle
+				include ../_common/_sidebar
+				include ../_common/_catalog
+		section.information
+			.container
+				include ../_common/_information
+	include ../_common/_footer
+	script(src="../bower/jquery/jquery.js")
+	script(src="../js/jquery.columnizer.js")
+	script $('.information__columnize').columnize({ columns: 2 });

@@ -1,0 +1,15 @@
+.catalog{
+	float: right;
+	width: 743px;
+}
+
+.catalog__view{
+	@extend %clearfix;
+	.catalog__view_sort{
+		float: left;
+	}
+
+	.catalog__view_show-style{
+		float: right;
+	}
+}

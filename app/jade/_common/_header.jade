@@ -1,19 +1,21 @@
 header.header-first
 	.container
-		+socials(['fb','vk','tw'])
+		.socials
+			+socials(['fb','vk','tw'])
 		
 		.contacts
 			ul.contacts__list
-				- var contacts={'address':'ул.Маяковская 6, офис 17','phone':'+7 (921) 123-12-13'};
+				- var contacts={'map-pin':'ул.Маяковская 6, офис 17','telephone':'+7 (921) 123-12-13'};
 				each item, key in contacts
 					li.contacts__item
-						i.contacts__icon(class='contact__icon_#{key}')
-						span.contacts__info= item
+						//i.contacts__icon(class='contacts__icon_#{key}')
+						span.contacts__info(class='contacts__info_#{key}')= item
 
 header.header-second
 	.container
 		a(href="/").logo
-			h1.logo_text Интернет магазин COOLTECH
+			img(src="../img/logo.png", alt="COOLTECH")
+			h1.logo__text Интернет магазин COOLTECH
 		form.search
 			input(name="search__input" type="text" placeholder="Что будем искать").search__input
 			input(name="search__submit" type="submit" value="Найти").search__submit
@@ -21,7 +23,5 @@ header.header-second
 			ul.site-section__list
 				- var siteSection=['Карта проезда','История заказов','Корзина'];
 				each item in siteSection
-					li.site-section-item
+					li.site-section__item
 						a(href="#").site-section__link= item
-						
-+menu(['Планшеты','Мобильные телефоны','Mp3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'],2)

@@ -5,8 +5,10 @@ var gulp = require('gulp'),
 	fs = require('fs'),
 	compass = require('gulp-compass');
 
-var jade_path = './app/jade/pages/*.jade',
-	scss_path = './app/scss/**/*.scss',
+var jade_path_to_watch = './app/jade/**/*.jade',
+	jade_path = './app/jade/*.jade',
+	scss_path_to_watch = './app/scss/**/*.scss',
+	scss_path = './app/scss/*.scss',
 	html_path = './app/pages',
 	css_path = './app/css';
 
@@ -33,9 +35,9 @@ gulp.task('compass', function() {
 }); 
 
 gulp.task('watch', function(){
-	gulp.watch(jade_path, ['jade']);
+	gulp.watch(jade_path_to_watch, ['jade']);
 	//gulp.watch('./pages.json', ['index']);
-	gulp.watch(scss_path, ['compass'])
+	gulp.watch(scss_path_to_watch, ['compass'])
 });
 
 

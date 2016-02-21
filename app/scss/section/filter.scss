@@ -1,0 +1,112 @@
+.filter{
+	float: left;
+	width: 333px;
+}
+
+.type-goods{
+	margin-bottom: 38px;
+
+	.type-goods__list{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.type-goods__item{
+		
+		width: 335px;
+		border-style: solid;
+  		border-width: 0 1px 1px 1px;
+  		border-color: rgb(222, 225, 228);
+		&:first-child{
+			-webkit-border-radius: 5px 5px 0 0;
+			-moz-border-radius: 5px 5px 0 0;
+			border-radius: 5px 5px 0 0;
+			border-top-width: 1px;
+			.type-goods__link{
+				-webkit-border-radius: 5px 5px 0 0;
+				-moz-border-radius: 5px 5px 0 0;
+				border-radius: 5px 5px 0 0;
+			}
+		}
+		
+		&:last-child{
+			-webkit-border-radius: 0 0 5px 5px;
+			-moz-border-radius: 0 0 5px 5px;
+			border-radius: 0 0 5px 5px;
+			.type-goods__link{
+				-webkit-border-radius: 0 0 5px 5px;
+				-moz-border-radius: 0 0 5px 5px;
+				border-radius: 0 0 5px 5px;
+			}
+		}
+	}
+
+	.type-goods__link{
+		word-wrap: break-word;
+		padding: 12px 30px;
+		font-family: 'open_sansregular';
+		font-size: 0.875rem;
+		color: #7f7f7f;
+		text-decoration: none;
+		display: inline-block;
+		width: 100%;
+		background-color: #fbfbfb;
+	}
+
+	.type-goods__link_active{
+		color: #5d656c;
+		background-color: #d9e5ea;
+	}
+}
+
+.goods-filter{
+
+	.goods__list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.goods__item{
+		border-style: solid;
+  		border-width: 0 1px 1px 1px;
+  		border-color: rgb(222, 225, 228);
+		&:first-child{
+			-webkit-border-radius: 5px 5px 0 0;
+			-moz-border-radius: 5px 5px 0 0;
+			border-radius: 5px 5px 0 0;
+			border-top-width: 1px;
+			.goods__trigger{
+				-webkit-border-radius: 5px 5px 0 0;
+				-moz-border-radius: 5px 5px 0 0;
+				border-radius: 5px 5px 0 0;
+			}
+		}
+		
+		&:last-child{
+			-webkit-border-radius: 0 0 5px 5px;
+			-moz-border-radius: 0 0 5px 5px;
+			border-radius: 0 0 5px 5px;
+			.goods__trigger{
+				-webkit-border-radius: 0 0 5px 5px;
+				-moz-border-radius: 0 0 5px 5px;
+				border-radius: 0 0 5px 5px;
+			}
+		}
+	}
+	
+	.goods__trigger{
+		text-decoration: none;
+		word-wrap: break-word;
+		padding: 12px 30px;
+		font-family: 'open_sanssemibold';
+		font-size: 1rem;
+		color: #333333;
+		display: inline-block;
+		width: 100%;
+		background-color: #fbfbfb;
+	}
+
+
+}

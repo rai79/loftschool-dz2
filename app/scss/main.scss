@@ -1,7 +1,14 @@
-.content{
-	background-color: red;
-}
+@import "compass";
+@import "icons/*.png";
 
-.wrapper{
-	background-color: green;
-}
+/*-------- General style --------*/
+@import "_layout/adjustment";
+@import "_layout/mixins";
+/*---------- Section style--------*/
+@import "section/header";
+@import "section/menu";
+@import "section/breadcrumbs";
+@import "section/filter";
+@import "section/info";
+@import "section/content";
+@import "section/footer";

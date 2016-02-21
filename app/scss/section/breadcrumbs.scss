@@ -1,0 +1,42 @@
+/*--------------- breadcrumbs ------------*/
+.breadcrumbs{
+	margin-bottom: 20px;
+
+	.breadcrumbs__list{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.breadcrumbs__item{
+		float: left;
+		.breadcrumbs__link{
+			font-size: 0.875rem;
+			font-family: 'open_sansregular';
+			color: #333333;
+			text-decoration: none;
+			
+			&:hover{
+				text-decoration: underline;
+			}
+
+			&:after{
+				margin: 0 4px;
+				content: ">";
+			}
+		}
+	}
+
+	
+
+	.breadcrumbs__item_active{
+		.breadcrumbs__link{
+			color: #ff6600;
+			text-decoration: underline;
+			
+			&:after{
+				content: "";
+			}
+		}
+	}
+}

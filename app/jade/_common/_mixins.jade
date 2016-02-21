@@ -1,25 +1,20 @@
 mixin socials(socialItems)
-	.socials
-		ul.socials__list
-			each item in socialItems
-				li.social__item
-					a.socials__link(href="#" class="socials__link_#{item}")= item
+	ul.socials__list
+		each item in socialItems
+			li.socials__item
+				a.socials__link(href="#" class="socials__link_#{item}")
 
 mixin breadcrumbs(items)
-	.breadcrumbs
-		.container
-			ul.breadcrumbs__list
-				each item, idx in items
-					li.breadcrumbs__item(class="#{idx == items.length-1 ? 'breadcrumbs__item_active' : ''}")
-						a(href="#").breadcrumbs__link= item
+	ul.breadcrumbs__list
+		each item, idx in items
+			li.breadcrumbs__item(class="#{idx == items.length-1 ? 'breadcrumbs__item_active' : ''}")
+				a(href="#").breadcrumbs__link= item
 
 mixin menu(menuItems, indexActive)
-	nav.nav
-		.container
-			ul.nav__list
-				each item, idx in menuItems
-					li.nav__item(class="#{idx == indexActive-1 ? 'nav__item_active' : ''}")
-						a(href="#").nav__link= item
+	ul.nav__list
+		each item, idx in menuItems
+			li.nav__item(class="#{idx == indexActive-1 ? 'nav__item_active' : ''}")
+				a(href="#").nav__link= item
 
 mixin goods-brands(brandsItems)
 	fieldset.goods-brands
@@ -41,8 +36,7 @@ mixin goods-op-sys(osItems)
 		a(href="#").goods-op-sys__reset
 
 mixin footer-menu(menuItems)
-	.footer-menu
-		ul.footer-menu__list
-			each item in menuItems
-				li.footer-menu__item
-					a(href="#").footer-menu__link= item
+	ul.footer-menu__list
+		each item in menuItems
+			li.footer-menu__item
+				a(href="#").footer-menu__link= item

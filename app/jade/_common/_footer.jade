@@ -1,7 +1,12 @@
 footer.footer
-	.footer-right
-		a(href="/").logo
-	.footer-left
-		+socials(['fb','vk','tw'])
-		+footer-menu(['Планшеты','Мобильные телефоны','Mp3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'])
+	.container
+		.footer-left
+			a(href="/").logo
+				img(src="../img/footer-logo.png", alt="COOLTECH")
+		.footer-right
+			.socials
+				+socials(['footer-fb','footer-vk','footer-tw'])
+			.footer-menu
+				+footer-menu(['Планшеты','Мобильные телефоны','Mp3 плееры'])
+				+footer-menu(['Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'])
 	.footer-copyrights All rights reserved. 2015. no copy alowed

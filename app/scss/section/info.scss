@@ -1,0 +1,35 @@
+.information{
+	margin-bottom: 10px;
+
+	.information__caption{
+		font-family: 'open_sansbold';
+		line-height: 1;
+		font-size: 1.25rem;
+		color: #333333;
+		margin-top: 0;
+		margin-bottom: 21px;
+	}
+
+
+	.information__columnize{
+
+		.first{
+			padding-right: 20px; 
+		}
+
+		.last{
+			padding-left: 20px;
+		}
+	}
+
+	.information__paragraf{
+		margin-top: 0;
+		margin-bottom: 20px;
+		text-indent: 37px;
+		font-family: 'open_sansregular';
+		line-height: 1.45;
+		font-size: 0.875rem;
+		color: #333333;
+		text-align: justify;
+	}
+}

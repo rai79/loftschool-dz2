@@ -1,0 +1,49 @@
+%clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	
+	&:after {
+		clear: both;
+	}
+}
+
+* { box-sizing: border-box }
+
+html, body{
+	height: 100%;
+	width: 100%;
+	min-width: 1100px;
+	background-color: #f4f4f4;
+	//display: block;
+}
+
+//обертка основного блока
+.wrapper{
+	display: table;
+	height: 100%;
+	min-width: 100%;
+	overflow: hidden;
+	position: relative;
+	@extend %clearfix;
+}
+
+//пушер футера
+.wrapper:after{
+	content: "";
+	height: 220px;
+}
+
+.container{
+	margin: 0 auto;
+	width: 1100px;
+	@extend %clearfix;
+}
+
+.goods-type{
+	color: #333333;
+	font-size: 1.25rem;
+	font-family: 'open_sansbold';
+	margin: 0 0 28px 0;
+}
