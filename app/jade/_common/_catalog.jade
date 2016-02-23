@@ -1,71 +1,76 @@
 article.catalog
 	form.catalog__view
 		fieldset.catalog__view_sort
-			span.catalog__view_label Сортировать по
+			span.catalog__view_label-sort Сортировать по
 			select.catalog__view_select
 				option.catalog__view_item по цене
 				option.catalog__view_item по популярности
 		fieldset.catalog__view_show-style
-			span.catalog__view_label Вид каталога
-			button(title='Списком' class='catalog__view_activ').catalog__view_btn
-				i.catalog__view_btn-icon(class='icon_list')
-			button(title='Плиткой').catalog__view_btn
-				i.catalog__view_btn-icon(class='icon_table')
-			button(title='Списком без фото').catalog__view_btn
-				i.catalog__view_btn-icon(class='icon_short-list')
+			span.catalog__view_label-style Вид каталога
+			.catalog__view_box
+				button(title='Списком' class='catalog__view__list-active').catalog__view_list
+			.catalog__view_box
+				button(title='Плиткой').catalog__view_table
+			.catalog__view_box
+				button(title='Списком без фото').catalog__view_slist
 	
 	ul(class='catalog__list_list-view').catalog__list
 		li.catalog__item
 			.catalog__item__slideshow
-				.catalog__item__slideshow_display
-					img(src="../img/1/fullsize1.png", alt="Предпросмотр").catalog__item__slideshow_img
-				ul.catalog__item__slideshow_list
-					li.catalog__item__slideshow_item
-						a(href="#").catalog__item__slideshow_link
-							img(src="../img/1/prew1.png", alt="Миниатюра 1").catalog__item__slideshow_prew
-					li.catalog__item__slideshow_item
-						a(href="#").catalog__item__slideshow_link
-							img(src="../img/1/prew1.png", alt="Миниатюра 2").catalog__item__slideshow_prew
-					li.catalog__item__slideshow_item
-						a(href="#").catalog__item__slideshow_link
-							img(src="../img/1/prew1.png", alt="Миниатюра 3").catalog__item__slideshow_prew
-			.catalog__item__articul Артикул 189238
-			.catalog__item__name Samsung GT-I9301I GALAXY S 3
-			.catalog__item__options
-				.catalog__item__option(class='strSilverBgrnd')
-					p.catalog__item__option_str(class='strLeft') Тип SIM-карты
-					p.catalog__item__option_str(class='strRight') Micro-SIM
-				.catalog__item__option(class='strWhiteBgrnd')
-					p.catalog__item__option_str(class='strLeft') Количество SIM карт
-					p.catalog__item__option_str(class='strRight') 1
-				.catalog__item__option(class='strSilverBgrnd')
-					p.catalog__item__option_str(class='strLeft') Цвет
-					p.catalog__item__option_str(class='strRight') Белый
-				.catalog__item__option(class='strWhiteBgrnd')
-					p.catalog__item__option_str(class='strLeft') ОС
-					p.catalog__item__option_str(class='strRight') Android
-				.catalog__item__option(class='strSilverBgrnd')
-					p.catalog__item__option_str(class='strLeft') Связь 3G
-					p.catalog__item__option_str(class='strRight') Есть
-				.catalog__item__option(class='strWhiteBgrnd')
-					p.catalog__item__option_str(class='strLeft') 4G (LTE)
-					p.catalog__item__option_str(class='strRight') Нет
-				.catalog__item__option(class='strSilverBgrnd')
-					p.catalog__item__option_str(class='strLeft') GPS-модуль
-					p.catalog__item__option_str(class='strRight') Есть
-			.catalog__item__describle.
-				Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
-			.catalog__item__rating
-				span.catalog__item__rating_star(class='rating_activ') ☆
-				span.catalog__item__rating_star(class='rating_activ') ☆
-				span.catalog__item__rating_star(class='rating_activ') ☆
-				span.catalog__item__rating_star(class='rating_activ') ☆
-				span.catalog__item__rating_star ☆
-				.catalog__item__rating_status 4
-			.catalog__item__price 11 290 Р
-			.catalog__item__buy
-				button.catalog__item__buy-btn В корзину
-			.catalog__item__instock
-				i.catalog__item__instock_cirle
+				.slideshow__display_box
+					img(src="../img/1/fullsize1.png", alt="Предпросмотр").slideshow__img
+				ul.slideshow__list
+					li(class="slideshow__item_active").slideshow__item
+						a(href="#").slideshow__link
+							img(src="../img/1/prew1.png", alt="Миниатюра 1").slideshow__prew
+					li.slideshow__item
+						a(href="#").slideshow__link
+							img(src="../img/1/prew2.png", alt="Миниатюра 2").slideshow__prew
+					li.slideshow__item
+						a(href="#").slideshow__link
+							img(src="../img/1/prew3.png", alt="Миниатюра 3").slideshow__prew
+				.catalog__item__articul
+					p.catalog__item__articul_name Артикул
+					p.catalog__item__articul_txt 189238
+			.catalog__item__dev-desc
+				.catalog__item__name Samsung GT-I9301I GALAXY S 3
+				.catalog__item__options
+					.catalog__item__option(class='strSilverBgrnd')
+						p.catalog__item__option_str(class='strLeft') Тип SIM-карты
+						p.catalog__item__option_str(class='strRight') Micro-SIM
+					.catalog__item__option(class='strWhiteBgrnd')
+						p.catalog__item__option_str(class='strLeft') Количество SIM карт
+						p.catalog__item__option_str(class='strRight') 1
+					.catalog__item__option(class='strSilverBgrnd')
+						p.catalog__item__option_str(class='strLeft') Цвет
+						p.catalog__item__option_str(class='strRight') Белый
+					.catalog__item__option(class='strWhiteBgrnd')
+						p.catalog__item__option_str(class='strLeft') ОС
+						p.catalog__item__option_str(class='strRight') Android
+					.catalog__item__option(class='strSilverBgrnd')
+						p.catalog__item__option_str(class='strLeft') Связь 3G
+						p.catalog__item__option_str(class='strRight') Есть
+					.catalog__item__option(class='strWhiteBgrnd')
+						p.catalog__item__option_str(class='strLeft') 4G (LTE)
+						p.catalog__item__option_str(class='strRight') Нет
+					.catalog__item__option(class='strSilverBgrnd')
+						p.catalog__item__option_str(class='strLeft') GPS-модуль
+						p.catalog__item__option_str(class='strRight') Есть
+				.catalog__item__describle.
+					Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
+				.catalog__item__rating
+					span.catalog__item__rating_star(class='rating_activ') ☆
+					span.catalog__item__rating_star(class='rating_activ') ☆
+					span.catalog__item__rating_star(class='rating_activ') ☆
+					span.catalog__item__rating_star(class='rating_activ') ☆
+					span.catalog__item__rating_star ☆
+					.catalog__item__rating_status 4
+			.catalog__item__price-box
+				.catalog__item__price 11 290
+				.catalog__item__price_rouble г
+				.catalog__item__buy
+					button.catalog__item__buy-btn В корзину
+				.catalog__item__instock
+				.catalog__item__instock_cirle
 				span.catalog__item__instock_txt В наличии
 

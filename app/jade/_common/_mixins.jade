@@ -19,24 +19,29 @@ mixin menu(menuItems, indexActive)
 mixin goods-brands(brandsItems)
 	fieldset.goods-brands
 		each item in brandsItems
-			input(name="goods-brands" type="checkbox" value=item).goods-brands__input
-		a(href="#").goods-brands__reset
+			input(name="goods-brands" id="checkbox-#{item}" type="checkbox" value=item).goods-brands__input
+			label(for='checkbox-#{item}').goods__label_checkbox=item
+		a(href="#").goods-brands__reset Сбросить фильтр
 
 mixin goods-colors(colorsItems)
 	fieldset.goods-colors
 		ul.goods-colors__list
-			each item in colorsItems
+			each value, key in colorsItems
 				li.goods-colors__item
-				a(href="#").goods-colors__link= item
+					.goods-colors__box(class="box-#{key}")
+					
 
 mixin goods-op-sys(osItems)
 	fieldset.goods-op-sys
 		each item in osItems
-			input(name="goods-op-sys" type="checkbox" value=item).goods-op-sys__input
-		a(href="#").goods-op-sys__reset
+			input(name="goods-op-sys" id="checkbox-#{item}" type="checkbox" value=item).goods-op-sys__input
+			label(for='checkbox-#{item}').goods__label_checkbox=item
+		a(href="#").goods-op-sys__reset Сбросить фильтр
 
 mixin footer-menu(menuItems)
 	ul.footer-menu__list
 		each item in menuItems
 			li.footer-menu__item
 				a(href="#").footer-menu__link= item
+
+

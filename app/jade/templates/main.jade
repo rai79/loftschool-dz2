@@ -11,7 +11,12 @@ head
 	meta(name="author" content="Рудель Алексей")
 	link(rel="stylesheet", href="../css/main.css")
 	link(rel="stylesheet", href="../css/fonts.css")
+	link(rel="stylesheet", href="../css/font-awesome.css")
 	link(rel="stylesheet", href="../bower/normalize-css/normalize.css")
+	link(rel="stylesheet", href="../css/select2.css")
+	script(src="../bower/jquery/jquery.js")
+	script(src="../bower/jquery-ui/jquery-ui.js")
+	script(src="../js/main.js")
 	title
 		block pageTitle
 body
@@ -33,6 +38,8 @@ body
 			.container
 				include ../_common/_information
 	include ../_common/_footer
-	script(src="../bower/jquery/jquery.js")
-	script(src="../js/jquery.columnizer.js")
+	
+	script(src="../js/vendor/jquery.columnizer.js")
+	script(src="../js/vendor/select2.full.js")
 	script $('.information__columnize').columnize({ columns: 2 });
+	script $(".catalog__view_select").select2({minimumResultsForSearch: Infinity});
