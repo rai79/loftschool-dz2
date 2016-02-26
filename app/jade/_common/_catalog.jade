@@ -8,69 +8,36 @@ article.catalog
 		fieldset.catalog__view_show-style
 			span.catalog__view_label-style Вид каталога
 			.catalog__view_box
-				button(title='Списком' class='catalog__view__list-active').catalog__view_list
+				button(title='Списком' data-view = 'list' class='view__show-style active').catalog__view_list
 			.catalog__view_box
-				button(title='Плиткой').catalog__view_table
+				button(title='Плиткой' data-view = 'table' class='view__show-style').catalog__view_table
 			.catalog__view_box
-				button(title='Списком без фото').catalog__view_slist
+				button(title='Списком без фото' data-view = 'slist' class='view__show-style').catalog__view_slist
 	
-	ul(class='catalog__list_list-view').catalog__list
-		li.catalog__item
-			.catalog__item__slideshow
-				.slideshow__display_box
-					img(src="../img/1/fullsize1.png", alt="Предпросмотр").slideshow__img
-				ul.slideshow__list
-					li(class="slideshow__item_active").slideshow__item
-						a(href="#").slideshow__link
-							img(src="../img/1/prew1.png", alt="Миниатюра 1").slideshow__prew
-					li.slideshow__item
-						a(href="#").slideshow__link
-							img(src="../img/1/prew2.png", alt="Миниатюра 2").slideshow__prew
-					li.slideshow__item
-						a(href="#").slideshow__link
-							img(src="../img/1/prew3.png", alt="Миниатюра 3").slideshow__prew
-				.catalog__item__articul
-					p.catalog__item__articul_name Артикул
-					p.catalog__item__articul_txt 189238
-			.catalog__item__dev-desc
-				.catalog__item__name Samsung GT-I9301I GALAXY S 3
-				.catalog__item__options
-					.catalog__item__option(class='strSilverBgrnd')
-						p.catalog__item__option_str(class='strLeft') Тип SIM-карты
-						p.catalog__item__option_str(class='strRight') Micro-SIM
-					.catalog__item__option(class='strWhiteBgrnd')
-						p.catalog__item__option_str(class='strLeft') Количество SIM карт
-						p.catalog__item__option_str(class='strRight') 1
-					.catalog__item__option(class='strSilverBgrnd')
-						p.catalog__item__option_str(class='strLeft') Цвет
-						p.catalog__item__option_str(class='strRight') Белый
-					.catalog__item__option(class='strWhiteBgrnd')
-						p.catalog__item__option_str(class='strLeft') ОС
-						p.catalog__item__option_str(class='strRight') Android
-					.catalog__item__option(class='strSilverBgrnd')
-						p.catalog__item__option_str(class='strLeft') Связь 3G
-						p.catalog__item__option_str(class='strRight') Есть
-					.catalog__item__option(class='strWhiteBgrnd')
-						p.catalog__item__option_str(class='strLeft') 4G (LTE)
-						p.catalog__item__option_str(class='strRight') Нет
-					.catalog__item__option(class='strSilverBgrnd')
-						p.catalog__item__option_str(class='strLeft') GPS-модуль
-						p.catalog__item__option_str(class='strRight') Есть
-				.catalog__item__describle.
-					Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...
-				.catalog__item__rating
-					span.catalog__item__rating_star(class='rating_activ') ☆
-					span.catalog__item__rating_star(class='rating_activ') ☆
-					span.catalog__item__rating_star(class='rating_activ') ☆
-					span.catalog__item__rating_star(class='rating_activ') ☆
-					span.catalog__item__rating_star ☆
-					.catalog__item__rating_status 4
-			.catalog__item__price-box
-				.catalog__item__price 11 290
-				.catalog__item__price_rouble г
-				.catalog__item__buy
-					button.catalog__item__buy-btn В корзину
-				.catalog__item__instock
-				.catalog__item__instock_cirle
-				span.catalog__item__instock_txt В наличии
-
+	ul(class='catalog__list_view-list')#catalog__list
+		- var samsungItem = {"name":"Samsung GT-I9301I GALAXY S 3","articul":"189238","sim":"Micro-SIM","sim-count":"1","color":"Белый","os":"Android","have3g":"Есть","have4g":"Нет","gps":"Есть","description":"Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц...","price":"11 290","instock":"В наличии","rating":"4"};
+		+catalogItems(1, samsungItem)
+		- var lumia640Item = {"name":"Microsoft Lumia 640 RM-1077","articul":"283135","sim":"Micro-SIM","sim-count":"2","color":"Белый","os":"Windows Phone","have3g":"Есть","have4g":"Нет","gps":"A-GPS","description":"Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft...","price":"10 990","instock":"В наличии","rating":"4"};
+		+catalogItems(2, lumia640Item)
+		- var archosItem = {"name":"Archos 50 Oxygen Plus","articul":"189239","sim":"Micro-SIM","sim-count":"2","color":"Серый","os":"Android","have3g":"Есть","have4g":"Нет","gps":"Есть","description":"Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...","price":"9 900","instock":"В наличии","rating":"4"};
+		+catalogItems(3, archosItem)
+		- var philipsItem = {"name":"Philips S398 Black","articul":"189240","sim":"Micro-SIM","sim-count":"2","color":"Черный","os":"Android","have3g":"Есть","have4g":"Нет","gps":"Есть","description":"Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели...","price":"8 990","instock":"В наличии","rating":"4"};
+		+catalogItems(4, philipsItem)
+		- var lumia430Item = {"name":"Microsoft Lumia 430 RM-1099","articul":"387228","sim":"Micro-SIM","sim-count":"2","color":"Черный","os":"Windows Phone","have3g":"Есть","have4g":"Нет","gps":"A-GPS","description":"Смартфон Microsoft Lumia 430 RM-1099 black. Куда бы вы ни направлялись, смартфон должен быть надежным спутником. Поэтому у Microsoft Lumia 430 Dual SIM (RM-1099) удобный компактный корпус...","price":"5 390","instock":"В наличии","rating":"4"};
+		+catalogItems(5, lumia430Item)
+		- var senseitItem = {"name":"Senseit L301 black","articul":"359110","sim":"Micro-SIM","sim-count":"2","color":"Черный","os":"Android","have3g":"Есть","have4g":"Нет","gps":"Есть","description":"Смартфон Senseit L301 black, черный. Micro-SIM, две поддерживаемых SIM-карты, Android, 3G, GPS-модуль...","price":"4 990","instock":"В наличии","rating":"4"};
+		+catalogItems(6, senseitItem)
+		- var highscreenItem = {"name":"HIGHSCREEN WinWin Black","articul":"189245","sim":"Micro-SIM","sim-count":"2","color":"Черный","os":"Windows Phone","have3g":"Есть","have4g":"Нет","gps":"Есть","description":"Смартфон HIGHSCREEN WinWin Black оснащен 4\" дисплеем и двумя слотами для SIM-карт. Windows Phone, 3G, Bluetooth, USB-подключение к ПК...","price":"3 990","instock":"В наличии","rating":"4"};
+		+catalogItems(7, highscreenItem)
+		- var alcatelItem = {"name":"Alcatel OT4013D PIXI 3 (2 SIM)","articul":"112234","sim":"Micro-SIM","sim-count":"2","color":"Белый","os":"Android","have3g":"Есть","have4g":"Нет","gps":"A-GPS","description":"Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM). Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт...","price":"3 290","instock":"В наличии","rating":"4"};
+		+catalogItems(8, alcatelItem)
+		- var flyItem = {"name":"Fly IQ434 Era Nano 5","articul":"387264","sim":"Micro-SIM","sim-count":"2","color":"Черный","os":"Android","have3g":"Нет","have4g":"Нет","gps":"Нет","description":"Смартфон Fly IQ434 Era Nano 5 оснащен 3.5\" дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi...","price":"1 790","instock":"В наличии","rating":"4"};
+		+catalogItems(9, flyItem)
+	.catalog__item__pages
+		button(title='Следующая страница' class='catalog__page-previous').catalog__pages
+			.catalog__page-previous-icon
+		button(title='Страница' class='catalog__page-active').catalog__pages 1
+		button(title='Страница').catalog__pages 2
+		button(title='Страница').catalog__pages 3
+		button(title='Предыдущая страница' class='catalog__page-next').catalog__pages
+			.catalog__page-next-icon

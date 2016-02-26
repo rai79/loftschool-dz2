@@ -9,14 +9,27 @@ head
 	meta(name="description" content="Домашнее задание интернет магазин")
 	meta(name="keywords" content="COOLTECH")
 	meta(name="author" content="Рудель Алексей")
-	link(rel="stylesheet", href="../css/main.css")
-	link(rel="stylesheet", href="../css/fonts.css")
-	link(rel="stylesheet", href="../css/font-awesome.css")
-	link(rel="stylesheet", href="../bower/normalize-css/normalize.css")
-	link(rel="stylesheet", href="../css/select2.css")
-	script(src="../bower/jquery/jquery.js")
-	script(src="../bower/jquery-ui/jquery-ui.js")
-	script(src="../js/main.js")
+	link(rel="stylesheet", href="../css/main.min.css")
+	link(rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png")
+	link(rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png")
+	link(rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png")
+	link(rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png")
+	link(rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png")
+	link(rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png")
+	link(rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png")
+	link(rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png")
+	link(rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png")
+	link(rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32")
+	link(rel="icon" type="image/png" href="/icons/android-chrome-192x192.png" sizes="192x192")
+	link(rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96")
+	link(rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16")
+	link(rel="manifest" href="/icons/manifest.json")
+	link(rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5")
+	link(rel="shortcut icon" href="/icons/favicon.ico")
+	meta(name="msapplication-TileColor" content="#da532c")
+	meta(name="msapplication-TileImage" content="/icons/mstile-144x144.png")
+	meta(name="msapplication-config" content="/icons/browserconfig.xml")
+	meta(name="theme-color" content="#ffffff")
 	title
 		block pageTitle
 body
@@ -27,7 +40,6 @@ body
 				+menu(['Планшеты','Мобильные телефоны','Mp3 плееры','Персональные компьютеры','Ноутбуки','Аксессуары','Бытовая техника'],2)
 		.breadcrumbs
 			.container
-				//- var breadcrumbs={'Главная':'#','Каталог':'#'};
 				+breadcrumbs(['Главная','Каталог'])
 		section.content
 			.container
@@ -39,7 +51,8 @@ body
 				include ../_common/_information
 	include ../_common/_footer
 	
-	script(src="../js/vendor/jquery.columnizer.js")
-	script(src="../js/vendor/select2.full.js")
-	script $('.information__columnize').columnize({ columns: 2 });
-	script $(".catalog__view_select").select2({minimumResultsForSearch: Infinity});
+	script(src="../js/vendor/jquery.min.js")
+	script(src="../js/vendor/jquery-ui.min.js")
+	script(src="../js/vendor/jquery.columnizer.min.js")
+	script(src="../js/vendor/select2.min.js")
+	script(src="../js/main.min.js")

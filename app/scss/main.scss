@@ -1,10 +1,13 @@
 @import "compass";
-@import "icons/*.png";
-@import "input/*.png";
-
+@import "sprites/*.png";
+/*------------ Vendor styles edited-----------*/
+@import "vendor/normalize";
+@import "vendor/select";
+@import "vendor/font-awesome";
 /*-------- General style --------*/
 @import "_layout/adjustment";
 @import "_layout/mixins";
+@import "_layout/fonts";
 /*---------- Section style--------*/
 @import "section/header";
 @import "section/menu";

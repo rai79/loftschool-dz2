@@ -4,4 +4,5 @@
 2. cd site
 3. bower i
 4. npm i
-5. gulp
+5. gulp watch  - for parse *.jade, *.scss
+6. gulp build  - for build and start browser-sync

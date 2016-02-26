@@ -43,7 +43,7 @@
 	$socialItems: footer-vk, footer-fb, footer-tw;
 	@each $item in $socialItems {
 		.socials__link_#{$item}{
-			@include icons-sprite($item);	
+			@include sprites-sprite($item);	
 		}
 	}
 	

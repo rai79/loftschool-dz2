@@ -17,14 +17,14 @@ mixin menu(menuItems, indexActive)
 				a(href="#").nav__link= item
 
 mixin goods-brands(brandsItems)
-	fieldset.goods-brands
+	fieldset.goods-brands.goods__trigger_content
 		each item in brandsItems
-			input(name="goods-brands" id="checkbox-#{item}" type="checkbox" value=item).goods-brands__input
+			input(name="goods-brands" id="checkbox-#{item}" type="checkbox" value=item).goods__input
 			label(for='checkbox-#{item}').goods__label_checkbox=item
-		a(href="#").goods-brands__reset Сбросить фильтр
+		a(href="#").goods__reset Сбросить фильтр
 
 mixin goods-colors(colorsItems)
-	fieldset.goods-colors
+	fieldset.goods-colors.goods__trigger_content
 		ul.goods-colors__list
 			each value, key in colorsItems
 				li.goods-colors__item
@@ -32,11 +32,11 @@ mixin goods-colors(colorsItems)
 					
 
 mixin goods-op-sys(osItems)
-	fieldset.goods-op-sys
+	fieldset.goods-op-sys.goods__trigger_content
 		each item in osItems
-			input(name="goods-op-sys" id="checkbox-#{item}" type="checkbox" value=item).goods-op-sys__input
+			input(name="goods-op-sys" id="checkbox-#{item}" type="checkbox" value=item).goods__input
 			label(for='checkbox-#{item}').goods__label_checkbox=item
-		a(href="#").goods-op-sys__reset Сбросить фильтр
+		a(href="#").goods__reset Сбросить фильтр
 
 mixin footer-menu(menuItems)
 	ul.footer-menu__list
@@ -44,4 +44,60 @@ mixin footer-menu(menuItems)
 			li.footer-menu__item
 				a(href="#").footer-menu__link= item
 
-
+mixin catalogItems(index, catalogItem)
+	li.catalog__item
+		.catalog__item__slideshow
+			.slideshow__display_box
+				img(src="../img/#{index}/fullsize1.jpg", alt="Предпросмотр").slideshow__img
+			ul.slideshow__list
+				li(class="active").slideshow__item
+					a(href="#").slideshow__link
+						img(src="../img/#{index}/prew1.png" data-bigpic="../img/#{index}/fullsize1.jpg" alt="Миниатюра 1").slideshow__prew
+				li.slideshow__item
+					a(href="#").slideshow__link
+						img(src="../img/#{index}/prew2.png" data-bigpic="../img/#{index}/fullsize2.jpg" alt="Миниатюра 2").slideshow__prew
+				li.slideshow__item
+					a(href="#").slideshow__link
+						img(src="../img/#{index}/prew3.png" data-bigpic="../img/#{index}/fullsize3.jpg" alt="Миниатюра 3").slideshow__prew
+			.catalog__item__articul
+				p.catalog__item__articul_name Артикул
+				p.catalog__item__articul_txt #{catalogItem.articul}
+		.catalog__item__dev-desc
+			.catalog__item__name #{catalogItem.name}
+			ul.options__list
+				li.options__item
+					span.option_str-Left Тип SIM-карты
+					span.option_str-Right #{catalogItem.sim}
+				li.options__item
+					span.option_str-Left Количество SIM карт
+					span.option_str-Right #{catalogItem.sim-count}
+				li.options__item
+					span.option_str-Left Цвет
+					span.option_str-Right #{catalogItem.color}
+				li.options__item
+					span.option_str-Left ОС
+					span.option_str-Right #{catalogItem.os}
+				li.options__item
+					span.option_str-Left Связь 3G
+					span.option_str-Right #{catalogItem.have3g}
+				li.options__item
+					span.option_str-Left 4G (LTE)
+					span.option_str-Right #{catalogItem.have4g}
+				li.options__item
+					span.option_str-Left GPS-модуль
+					span.option_str-Right #{catalogItem.gps}
+			.catalog__item__describle #{catalogItem.description}
+			.catalog__item__rating(data-rating='#{catalogItem.rating}')
+				i.catalog__rating-star(class="fa fa-star")
+				i.catalog__rating-star(class="fa fa-star")
+				i.catalog__rating-star(class="fa fa-star")
+				i.catalog__rating-star(class="fa fa-star")
+				i.catalog__rating-star(class="fa fa-star-o")
+				.catalog__item__rating_status #{catalogItem.rating}
+		.catalog__item__price-wrapper
+			.catalog__item__price #{catalogItem.price}
+			i.catalog__item__price_rouble(class="fa fa-rub")
+			.catalog__item__buy
+				button.catalog__item__buy-btn В корзину
+			.catalog__item__instock
+				.catalog__item__instock_txt #{catalogItem.instock}

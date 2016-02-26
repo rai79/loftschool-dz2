@@ -60,90 +60,7 @@
 }
 
 .goods-filter{
-	.goods-availability, .goods-brands, .goods-colors, .goods-prices, .goods-prices, .goods-op-sys{
-		border-width: 0;
-		padding: 0;
-		margin: 1px 29px 20px 59px;
-	}
-
-	.goods-prices{
-		margin: 1px 29px 20px 7px;
-		width: 240px;
-	}
-
-	.goods-colors{
-		margin: 1px 29px 0 7px;
-		width: 240px;
-	}
-
-	.goods-brands__input, .goods-availability__input, .goods-op-sys__input{
-		display: none;
-	}
-
-	.goods__trigger {
-		text-decoration: none;
-		word-wrap: break-word;
-		padding: 13px 28px 12px 28px;
-		font-family: 'open_sanssemibold';
-		
-		color: #333333;
-		display: inline-block;
-		width: 100%;
-		background-color: #fbfbfb;
-
-	}
-
-	.goods-brands__reset, .goods-op-sys__reset{
-		color: #5db2fc;
-		font-size: 0.875rem;
-		font-family: 'open_sansregular';
-		display: block;
-		margin-top: 14px;
-		margin-left: -29px;
-		&:hover{
-			color: lighten(#5db2fc, 10%)
-		}
-
-	}
-
-	.goods__label_radio, .goods__label_checkbox{
-		cursor: pointer;
-		display: block;
-		font-size: 0.875rem;
-		font-family: 'open_sansregular';
-		color: #333333;
-		position: relative;
-		margin-bottom: 18px;
-		&:last-of-type{
-			margin-bottom: 0;
-		}
-	}
-
-	$labelItems: radio, checkbox;
-		@each $item in $labelItems {
-			.goods__label_#{$item}:before{
-				content: "";
-				@include input-sprite($item);
-				height: 19px;
-				width: 19px;
-				position: absolute;
-				right: 100%;
-				margin-right: 10px;
-			}
-
-			.goods__label_#{$item}:hover:before{
-				@include input-sprite('#{$item}-hover');
-			}
-		}
-
-	.goods__label_radio_active:before{
-		@include input-sprite('radio-active');
-	}
-
-	.goods__label_checkbox_active:before{
-		@include input-sprite('checkbox-active');
-	}
-
+	
 	.goods__list{
 		list-style: none;
 		padding: 0;
@@ -156,6 +73,7 @@
 		-moz-border-radius: 5px;
 		border-radius: 5px;
 		background-color: #fbfbfb;
+		
 	}
 	
 	.goods__item{
@@ -180,11 +98,125 @@
 				border-radius: 0 0 5px 5px;
 			}
 		}
+
+		&.active{
+			.goods__title{
+				&:after{
+					@include sprites-sprite('hide-accordeon');
+				}
+			}
+			.goods__trigger_minor{
+				font-size: 1rem;
+			}
+			.goods__trigger_content{
+				overflow: visible;
+			}
+		}
+	}
+
+	.goods__title{
+		position: relative;
+		&:after{
+			content: "";
+			@include sprites-sprite('show-accordeon');	
+			position: absolute;
+			top: 19px;
+			right: 12px;
+			height: 11px;
+			width: 18px;
+			cursor: pointer;
+		}
+	}
+	
+	.goods__trigger_minor{
+		font-size: 0.875rem;
+	}
+
+	.goods__trigger {
+		text-decoration: none;
+		word-wrap: break-word;
+		padding: 13px 28px 12px 28px;
+		font-family: 'open_sanssemibold';
+		color: #333333;
+		display: inline-block;
+		width: 100%;
+		background-color: #fbfbfb;
+	}
+
+
+	.goods-availability, .goods-brands, .goods-colors, .goods-prices, .goods-prices, .goods-op-sys{
+		border-width: 0;
+		padding: 0 0 0 30px;
+		margin: 1px 29px 20px 29px;
+	}
+	
+	.goods__trigger_content{
+		display: none;
 	}
 
 	.goods-prices{
+		padding: 0;
+		margin: 1px 29px 20px 29px;
+		width: 240px;
 		@extend %clearfix;
-		margin-left: 29px;
+	}
+
+	.goods-colors{
+		padding: 0;
+		margin: 1px 29px 0 7px;
+		width: 240px;
+	}
+
+	.goods__reset{
+		color: #5db2fc;
+		font-size: 0.875rem;
+		font-family: 'open_sansregular';
+		display: block;
+		margin-top: 14px;
+		margin-left: -29px;
+		&:hover{
+			color: lighten(#5db2fc, 10%)
+		}
+	}
+
+	.goods__label_radio, .goods__label_checkbox{
+		cursor: pointer;
+		display: block;
+		font-size: 0.875rem;
+		font-family: 'open_sansregular';
+		color: #333333;
+		position: relative;
+		margin-bottom: 18px;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+
+	$labelItems: radio, checkbox;
+		@each $item in $labelItems {
+			.goods__label_#{$item}:before{
+				content: "";
+				@include sprites-sprite($item);
+				height: 19px;
+				width: 19px;
+				position: absolute;
+				right: 100%;
+				margin-right: 10px;
+			}
+
+			.goods__label_#{$item}:hover:before{
+				@include sprites-sprite('#{$item}-hover');
+			}
+		}
+
+	.goods__input{
+	 	display: none;
+	 	&:checked + .goods__label_radio:before{
+			@include sprites-sprite('radio-active');
+	 	}
+	 	&:checked + .goods__label_checkbox:before{
+	 		@include sprites-sprite('checkbox-active');
+	 	}
 	}
 
 	.goods__label_price{
@@ -224,7 +256,6 @@
 	}
 
 	.ui-slider {
-		//margin-left: -29px;
 		position: relative;
 		text-align: left;
 	}
@@ -237,7 +268,7 @@
 		cursor: default;
 		-ms-touch-action: none;
 		touch-action: none;
-		@include input-sprite('slider');
+		@include sprites-sprite('slider');
 		margin-left: -4px;
 	}
 

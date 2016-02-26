@@ -5,6 +5,7 @@
     "normalize-css": "normalize.css#~3.0.3",
     "modernizr": "2.8.3",
     "jquery.placeholder": "~0.2.4",
-    "jquery-ui": "~1.11.4"
+    "jquery-ui": "~1.11.4",
+    "jquery.columnizer": "~1.6.2"
   }
 }

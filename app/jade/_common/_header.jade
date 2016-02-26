@@ -5,11 +5,10 @@ header.header-first
 		
 		.contacts
 			ul.contacts__list
-				- var contacts={'map-pin':'ул.Маяковская 6, офис 17','telephone':'+7 (921) 123-12-13'};
-				each item, key in contacts
-					li.contacts__item
-						//i.contacts__icon(class='contacts__icon_#{key}')
-						span.contacts__info(class='contacts__info_#{key}')= item
+				li.contacts__item
+					span.contacts__info(class='contacts__info_map-pin') ул.Маяковская 6, офис 17
+				li.contacts__item
+					a.contacts__info(href='tel:+79211231213' class='contacts__info_telephone') +7 (921) 123-12-13
 
 header.header-second
 	.container

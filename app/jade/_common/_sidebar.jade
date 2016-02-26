@@ -4,23 +4,26 @@ aside.filter
 			- var goodsItems = ['Флагманы','Бюджетная линейка'];
 			each item in goodsItems
 				li.type-goods__item
-					a(href="#" class="").type-goods__link= item
+					a(href="#" class="type-goods__link " + ((item == 'Бюджетная линейка') ? 'type-goods__link_active' : ''))= item
 	.goods
 		form.goods-filter
 			ul.goods__list
 				li.goods__item
-					a(href="#").goods__trigger Наличие в магазинах
-					fieldset.goods-availability
-						input(name="availability" id="radio-all" type="radio" value="Во всех магазинах" checked).goods-availability__input
+					.goods__title
+						a(href="#").goods__trigger Наличие в магазинах
+					fieldset.goods-availability.goods__trigger_content
+						input(name="availability" id="radio-all" type="radio" value="Во всех магазинах" checked).goods__input
 						label(for="radio-all").goods__label_radio Во всех магазинах
-						input(name="availability" id="radio-nearest" type="radio" value="В ближайшем ко мне магазине").goods-availability__input
+						input(name="availability" id="radio-nearest" type="radio" value="В ближайшем ко мне магазине").goods__input
 						label(for="radio-nearest").goods__label_radio В ближайшем ко мне магазине
 				li.goods__item
-					a(href="#").goods__trigger Бренды
+					.goods__title
+						a(href="#").goods__trigger.goods__trigger_minor Бренды
 					+goods-brands(['Apple','Asus','Lenovo','Motorola','Samsung'])
 				li.goods__item
-					a(href="#").goods__trigger Цена
-					fieldset.goods-prices
+					.goods__title
+						a(href="#").goods__trigger.goods__trigger_minor Цена
+					fieldset.goods-prices.goods__trigger_content
 						.goods-prices__min
 							label(for="goods-prices__min").goods__label_price от
 							input(name="goods-prices__min" id="goods-prices__min" type="text" value="100").goods-prices__input
@@ -29,9 +32,11 @@ aside.filter
 							input(name="goods-prices__max" id="goods-prices__max" type="text" value="13000").goods-prices__input
 						.goods-prices__slider-range(id='slider-range')
 				li.goods__item
-					a(href="#").goods__trigger Цвет
+					.goods__title
+						a(href="#").goods__trigger.goods__trigger_minor Цвет
 					- var colorsItems = {white:'Белый',silver:'Серый',black:'Черный',blue:'Темно-синий',red:'Красный',yellow:'Желтый',orange:'Оранжевый',green:'Зеленый',lightblue:'Голубой',magenta:'Фиолетовый',pink:'Розовый',brown:'Коричневый'};
 					+goods-colors(colorsItems)
 				li.goods__item
-					a(href="#").goods__trigger Операционные системы
+					.goods__title
+						a(href="#").goods__trigger.goods__trigger_minor Операционные системы
 					+goods-op-sys(['Android','iOS','Windows Mobile','Symbian','Custom'])
