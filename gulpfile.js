@@ -45,7 +45,8 @@ gulp.task('compass', function() {
 			css: './app/css',
 			sass: './app/scss'
 		}))
-		.pipe(minifyCss('main.min.css'))
+		.pipe(minifyCss())
+		.pipe(rename('main.min.css'))
 		.pipe(gulp.dest(prod_css_path));
 }); 
 
