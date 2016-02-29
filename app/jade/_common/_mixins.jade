@@ -97,7 +97,5 @@ mixin catalogItems(index, catalogItem)
 		.catalog__item__price-wrapper
 			.catalog__item__price #{catalogItem.price}
 			i.catalog__item__price_rouble(class="fa fa-rub")
-			.catalog__item__buy
-				button.catalog__item__buy-btn В корзину
-			.catalog__item__instock
-				.catalog__item__instock_txt #{catalogItem.instock}
+		button.catalog__item__buy-btn В корзину
+		.catalog__item__instock #{catalogItem.instock}

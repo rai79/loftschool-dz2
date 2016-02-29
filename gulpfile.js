@@ -34,7 +34,7 @@ gulp.task('jade',function() {
 			}))
 		.pipe(gulp.dest(prod_html_path))
 });
-// copmas кладет в папку разработки, а оттуда забираем  в дистр и минифицируем
+// copmas кладет в папку разработки, а оттуда забираем  в дистр и минифицируем//.pipe(minifyCss())
 gulp.task('compass', function() {
 	gulp.src(scss_path)
 		.pipe(plumber())
@@ -42,10 +42,9 @@ gulp.task('compass', function() {
 			config_file: 'config.rb',
 			sourcemap: true,
 			debug: true,
-			css: './app/css',
+			css: './css',
 			sass: './app/scss'
 		}))
-		.pipe(minifyCss())
 		.pipe(rename('main.min.css'))
 		.pipe(gulp.dest(prod_css_path));
 }); 
